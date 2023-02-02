@@ -569,6 +569,7 @@ header .container i{
     -ms-transition: var(--transition);
     -o-transition: var(--transition);
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .projects .box .go-now:hover{
