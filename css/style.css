@@ -29,7 +29,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 13px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -43,6 +43,11 @@ html {
   -moz-transition: var(--section-color);
   -ms-transition: var(--section-color);
   -o-transition: var(--section-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -288,7 +293,7 @@ header .container i {
   .landing .info {
     text-align: center;
   }
-  .landing .info a {
+  .landing .info .read {
     margin: auto;
   }
 }
@@ -304,7 +309,7 @@ header .container i {
   text-shadow: -3px 2px 0px #000000bd;
 }
 
-.landing .info span {
+.landing .info .amrName {
   color: var(--main-color);
   text-shadow: -3px 2px 0px #000000bd;
 }
@@ -320,7 +325,7 @@ header .container i {
   font-size: 24px;
 }
 
-.landing .info a {
+.landing .info .read {
   color: var(--main-color);
   font-weight: 900;
   display: block;
@@ -343,9 +348,10 @@ header .container i {
   );
   background-size: 200% 100%;
   background-position: right bottom;
+  cursor: pointer;
 }
 
-.landing .info a:hover {
+.landing .info .read:hover {
   background-position: left bottom;
   color: black;
 }
@@ -567,6 +573,7 @@ header .container i {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(354px, 1fr));
   gap: 40px;
+  position: relative;
 }
 
 @media (max-width: 400px) {
@@ -836,4 +843,102 @@ header .container i {
 
 .promat + span:hover {
   background-color: #a51b13;
+}
+
+.sProjects {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+
+@media (max-width: 767px) {
+  .sProjects .main-title {
+    font-size: 38px;
+  }
+}
+
+.sProjects .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  position: relative;
+}
+
+.light {
+  position: absolute;
+  width: 64px;
+  top: -85px;
+  right: 10px;
+  transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  opacity: 0.4;
+}
+
+.progI {
+  position: absolute;
+  width: 64px;
+  bottom: -85px;
+  left: 10px;
+  transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  opacity: 0.4;
+}
+
+.sProjects a {
+  width: fit-content;
+  display: block;
+}
+
+.sProjects img {
+  max-width: 100%;
+}
+
+.information {
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  padding: 12px;
+  background-color: var(--main-color);
+  border-radius: 6px;
+  color: black;
+  z-index: 11111111111111111;
+  position: relative;
+  text-align: left;
+  line-height: 1.8;
+  text-transform: capitalize;
+  font-size: 13px;
+  opacity: 0;
+  left: -540px;
+}
+
+.information .html {
+  color: darkslategrey;
+  font-weight: bold;
+}
+
+.information .css {
+  font-weight: bold;
+  color: darkred;
+}
+
+.information .javaScript {
+  font-weight: bold;
+  color: rebeccapurple;
+}
+
+.opacityShow {
+  opacity: 1;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  left: 0;
 }
