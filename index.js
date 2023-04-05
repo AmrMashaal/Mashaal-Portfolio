@@ -20,11 +20,18 @@ let promat2 = document.querySelector(".close");
 promat1.innerHTML = "Hello My Friend <3";
 setTimeout(function () {
   promat1.style.left = "0";
-}, 1000);
+}, 10000);
 promat2.onclick = function () {
   promat1.remove();
   promat2.remove();
 };
 setTimeout(function () {
   promat2.style.left = "280px";
-}, 2000);
+}, 11000);
+
+let read = document.querySelector(".read")
+let information = document.querySelector(".information")
+
+read.onclick = function(){
+  information.classList.toggle("opacityShow")
+}
