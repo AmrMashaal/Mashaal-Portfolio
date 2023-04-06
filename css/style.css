@@ -366,6 +366,30 @@ header .container i {
   position: relative;
 }
 
+@media (max-width: 991px) {
+  .landing .landing-img {
+    top: 8px !important;
+  }
+}
+
+@media (max-width: 692px) {
+  .landing .landing-img {
+    top: -4px !important;
+  }
+}
+
+@media (max-width: 574px) {
+  .landing .landing-img {
+    top: -13px !important;
+  }
+}
+
+@media (max-width: 574px) {
+  .landing::before {
+    top: -113px;
+  }
+}
+
 @keyframes img-anm {
   0% {
     transform: translateY(94%);
