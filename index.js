@@ -15,23 +15,34 @@ up.onclick = function () {
     behavior: "smooth",
   });
 };
-let promat1 = document.querySelector(".promat");
-let promat2 = document.querySelector(".close");
-promat1.innerHTML = "Hello My Friend <3";
-setTimeout(function () {
-  promat1.style.left = "0";
-}, 10000);
-promat2.onclick = function () {
-  promat1.remove();
-  promat2.remove();
+
+let read = document.querySelector(".read");
+let information = document.querySelector(".information");
+
+read.onclick = function () {
+  information.classList.toggle("opacityShow");
 };
-setTimeout(function () {
-  promat2.style.left = "280px";
-}, 11000);
 
-let read = document.querySelector(".read")
-let information = document.querySelector(".information")
+let scroller = document.querySelector(".scroller");
+let height =
+  document.documentElement.scrollHeight - document.documentElement.clientHeight;
+window.addEventListener("scroll", function () {
+  let scrollTop = document.documentElement.scrollTop;
+  scroller.style.width = `${(scrollTop / height) * 100}%`;
+});
 
-read.onclick = function(){
-  information.classList.toggle("opacityShow")
-}
+let spans = document.querySelectorAll(".skills span");
+let section = document.querySelector("section");
+
+window.onscroll = function () {
+  if (window.scrollY >= section.offsetTop - 320) {
+    spans.forEach(function (span) {
+      span.style.width = span.dataset.width;
+    });
+  }
+  if (window.innerWidth >= 1486) {
+    spans.forEach(function (span) {
+      span.style.width = span.dataset.width;
+    });
+  }
+};
