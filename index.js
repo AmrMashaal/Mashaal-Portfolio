@@ -1,21 +1,3 @@
-let up = document.querySelector(".toUp");
-
-window.onscroll = function () {
-  if (window.scrollY >= 281.25) {
-    up.classList.add("show");
-  } else {
-    up.classList.remove("show");
-  }
-};
-
-up.onclick = function () {
-  window.scrollTo({
-    left: 0,
-    top: 0,
-    behavior: "smooth",
-  });
-};
-
 let read = document.querySelector(".read");
 let information = document.querySelector(".information");
 
@@ -34,15 +16,20 @@ window.addEventListener("scroll", function () {
 let spans = document.querySelectorAll(".skills span");
 let section = document.querySelector("section");
 
-window.onscroll = function () {
-  if (window.scrollY >= section.offsetTop - 320) {
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= section.offsetTop - 300) {
     spans.forEach(function (span) {
       span.style.width = span.dataset.width;
     });
   }
-  if (window.innerWidth >= 1486) {
+});
+
+function big() {
+  if (document.documentElement.clientHeight >= 1250) {
     spans.forEach(function (span) {
       span.style.width = span.dataset.width;
     });
   }
-};
+}
+
+big();
