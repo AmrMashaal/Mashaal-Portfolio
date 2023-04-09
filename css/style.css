@@ -322,7 +322,37 @@ header .container i {
 }
 
 .landing .info h2 {
-  font-size: 24px;
+  font-size: 21px;
+  width: 0;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  overflow: hidden;
+  animation: writing 2s steps(20) 1s both, blank 0.5s infinite;
+  -webkit-animation: writing 2s steps(20) 1s both, blank 0.5s infinite;
+}
+
+@keyframes writing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 310px;
+  }
+}
+
+@keyframes blank {
+  from {
+    border-right-color: white;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@media (max-width: 767px) {
+  .landing .info h2 {
+    margin: auto;
+  }
 }
 
 .landing .info .read {
@@ -702,6 +732,11 @@ header .container i {
   height: 100%;
   background-color: var(--main-color);
   position: relative;
+  transition: calc(var(--transition) + 0.3s);
+  -webkit-transition: calc(var(--transition) + 0.3s);
+  -moz-transition: calc(var(--transition) + 0.3s);
+  -ms-transition: calc(var(--transition) + 0.3s);
+  -o-transition: calc(var(--transition) + 0.3s);
 }
 
 .skills .box span::before {
@@ -965,4 +1000,14 @@ header .container i {
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
   left: 0;
+}
+
+.scroller {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--main-color);
+  z-index: 1111;
 }
