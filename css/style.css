@@ -527,15 +527,16 @@ header .container i {
 }
 
 .services {
-  padding-top: 70px;
+  padding-top: 20px;
   padding-bottom: var(--main-padding-bottom);
   position: relative;
 }
 
 .services .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .services .box {
@@ -549,6 +550,9 @@ header .container i {
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
+  margin: 25px 0px;
+  width: 411px;
+  max-width: 100%;
 }
 
 .services .box:hover {
@@ -1047,4 +1051,23 @@ header .container i {
   height: 4px;
   background-color: var(--main-color);
   z-index: 1111;
+}
+
+.lottie-player {
+  margin: -153px 0;
+}
+
+@media (max-width: 767px) {
+  .lottie-player {
+    height: 360px !important;
+    width: 500px !important;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .services .box {
+    width: 100% !important;
+    padding: 32px !important;
+  }
 }
