@@ -520,6 +520,12 @@ header .container i {
   z-index: 10;
 }
 
+@media (max-width: 564px) {
+  .arrow {
+    display: none;
+  }
+}
+
 .services {
   padding-top: 70px;
   padding-bottom: var(--main-padding-bottom);
@@ -787,28 +793,59 @@ header .container i {
 }
 
 .footer .container {
-  display: flex;
   padding: 21px;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer h3 {
-  color: var(--sconde-color);
+.footer .theLogo {
+  font-size: 23px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--main-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  padding: 12px;
+  border-radius: 10px;
+  margin: 14px 0 27px;
+  opacity: 0.7;
 }
 
 .footer a {
-  padding: 0 21px;
-  font-size: 20px;
-  color: var(--main-color);
+  font-size: 19px;
+  color: var(--sconde-color);
   font-weight: bold;
+  margin: 0 4px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  border: 1px solid var(--sconde-color);
+  display: flex;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 545px) {
-  .footer h3 {
-    margin-bottom: 10px;
-  }
+.footer a:hover {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+.footerLinks {
+  display: flex;
 }
 
 .toUp {
