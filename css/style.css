@@ -709,6 +709,24 @@ header .container i {
   padding-bottom: var(--main-padding-bottom);
 }
 
+.skills .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skills .boxes {
+  flex-basis: 60%;
+}
+
+@media (max-width: 991px) {
+  .skills .boxes {
+    flex-basis: 100%;
+    margin-top: 25px;
+  }
+}
+
 .skills .box {
   position: relative;
 }
@@ -1070,4 +1088,11 @@ header .container i {
     width: 100% !important;
     padding: 32px !important;
   }
+}
+
+.lottie-player2 {
+  width: 350px !important;
+  height: 350px !important;
+  max-width: 100%;
+  margin-top: -60px;
 }
