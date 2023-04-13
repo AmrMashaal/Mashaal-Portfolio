@@ -1096,3 +1096,47 @@ header .container i {
   max-width: 100%;
   margin-top: -60px;
 }
+
+.open {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: #1b1b1b;
+  z-index: 1111111111111111;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 137px;
+  height: 137px;
+  border-radius: 50%;
+  border: 10px solid white;
+  border-right-color: var(--main-color);
+  animation: loading 0.5s linear infinite;
+  -webkit-animation: loading 0.8s linear infinite;
+}
+
+.loadingHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes loading {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    -moz-transform: translate(-50%, -50%) rotate(360deg);
+    -ms-transform: translate(-50%, -50%) rotate(360deg);
+    -o-transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
