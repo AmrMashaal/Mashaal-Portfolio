@@ -33,3 +33,7 @@ function big() {
 }
 
 big();
+window.addEventListener("load", () => {
+  let Open = document.querySelector(".open");
+  Open.classList.add("loadingHidden");
+});
