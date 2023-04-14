@@ -295,7 +295,6 @@ header .container i {
   }
   .landing .info .read {
     margin: auto;
-    user-select: none;
   }
 }
 
@@ -380,6 +379,7 @@ header .container i {
   background-size: 200% 100%;
   background-position: right bottom;
   cursor: pointer;
+  user-select: none;
 }
 
 .landing .info .read:hover {
