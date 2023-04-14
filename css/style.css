@@ -295,6 +295,7 @@ header .container i {
   }
   .landing .info .read {
     margin: auto;
+    user-select: none;
   }
 }
 
