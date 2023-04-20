@@ -37,3 +37,9 @@ window.addEventListener("load", () => {
   let Open = document.querySelector(".open");
   Open.classList.add("loadingHidden");
 });
+
+let lag = document.querySelector(".lag");
+let lagHolder = document.querySelector(".lag .holder");
+lag.onclick = function (){
+  lagHolder.classList.toggle("showLag")
+}
