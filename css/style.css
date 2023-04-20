@@ -379,7 +379,6 @@ header .container i {
   background-size: 200% 100%;
   background-position: right bottom;
   cursor: pointer;
-  user-select: none;
 }
 
 .landing .info .read:hover {
@@ -1140,4 +1139,56 @@ header .container i {
     -ms-transform: translate(-50%, -50%) rotate(360deg);
     -o-transform: translate(-50%, -50%) rotate(360deg);
   }
+}
+
+.lag {
+  position: absolute;
+  top: 60px;
+  left: 17px;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  padding: 3px 5px;
+  border-radius: 3px;
+  user-select: none;
+}
+
+.lag span{
+  cursor: pointer;
+}
+
+.lag .holder {
+  color: var(--main-color);
+  position: absolute;
+  top: 21px;
+  padding: 6px 10px;
+  background-color: #1b1b1b;
+  border-radius: 6px;
+  font-size: 15px;
+  left: 3px;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  z-index: 1;
+}
+
+.lag .holder .one {
+  margin-bottom: 7px;
+  cursor: pointer;
+  color: var(--main-color);
+  display: block;
+}
+
+.lag .holder .two {
+  cursor: pointer;
+  color: var(--main-color);
+  display: block;
+}
+
+.showLag {
+  opacity: 1 !important;
+  visibility: unset !important;
 }
