@@ -242,8 +242,8 @@ header .container i {
 
 .landing {
   padding-top: 70px;
-  padding-bottom: var(--main-padding-bottom);
   position: relative;
+  overflow: hidden;
 }
 
 .landing::before {
@@ -251,11 +251,11 @@ header .container i {
   position: absolute;
   background-image: url(../media/7421018.jpg);
   width: 100%;
-  height: 100%;
+  height: 178%;
   opacity: 0.07;
   background-size: cover;
   filter: hue-rotate(271deg);
-  top: -99.99px;
+  bottom: 0;
   -webkit-filter: hue-rotate(271deg);
 }
 
@@ -263,17 +263,11 @@ header .container i {
   content: "";
   position: absolute;
   width: 100%;
-  height: 80.2%;
+  height: 100%;
   top: 17px;
   left: 0;
   z-index: -1;
   background-image: linear-gradient(45deg, black, #503502);
-}
-
-@media (min-width: 1199px) {
-  .landing::after {
-    height: 83%;
-  }
 }
 
 .landing .container {
@@ -290,7 +284,7 @@ header .container i {
   overflow: hidden;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 779px) {
   .landing .info {
     text-align: center;
   }
@@ -351,7 +345,7 @@ header .container i {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 779px) {
   .landing .info h2 {
     margin: auto;
   }
@@ -384,8 +378,13 @@ header .container i {
 }
 
 .landing .info .read:hover {
-  background-position: left bottom;
-  color: black;
+  background-position: left bottom !important;
+  color: black !important;
+}
+
+.readPlay {
+  background-position: left bottom !important;
+  color: black !important;
 }
 
 .landing .landing-img {
@@ -396,30 +395,6 @@ header .container i {
   animation: img-anm 0.5s linear forwards;
   -webkit-animation: img-anm 0.5s linear forwards;
   position: relative;
-}
-
-@media (max-width: 991px) {
-  .landing .landing-img {
-    top: 8px !important;
-  }
-}
-
-@media (max-width: 692px) {
-  .landing .landing-img {
-    top: -4px !important;
-  }
-}
-
-@media (max-width: 574px) {
-  .landing .landing-img {
-    top: -13px !important;
-  }
-}
-
-@media (max-width: 574px) {
-  .landing::before {
-    top: -113px;
-  }
 }
 
 @keyframes img-anm {
@@ -448,15 +423,9 @@ header .container i {
   }
 }
 
-@media (max-width: 779px) {
-  .landing::after {
-    height: 86.7%;
-  }
-}
-
 .landing .links {
   position: absolute;
-  bottom: 95px;
+  bottom: -4px;
   background-color: #1b1b1b;
   left: 50%;
   transform: translateX(-50%);
@@ -505,16 +474,16 @@ header .container i {
 }
 
 .landing .links a:hover {
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
+  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
 }
 
 .arrow {
   position: relative;
-  top: -105px;
+  bottom: 7px;
   font-size: 37px;
   left: 31px;
   color: var(--main-color);
@@ -644,7 +613,7 @@ header .container i {
 
 @media (max-width: 400px) {
   .projects .container {
-    grid-template-columns: repeat(auto-fill, minmax(334px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   }
 }
 
@@ -870,6 +839,7 @@ header .container i {
 
 .footerLinks {
   display: flex;
+  max-width: 100%;
 }
 
 .toUp {
@@ -983,6 +953,12 @@ header .container i {
   position: relative;
 }
 
+@media (max-width: 500px) {
+  .sProjects a img {
+    width: 100%;
+  }
+}
+
 .light {
   position: absolute;
   width: 64px;
@@ -1012,10 +988,6 @@ header .container i {
 .sProjects a {
   width: fit-content;
   display: block;
-}
-
-.sProjects img {
-  max-width: 100%;
 }
 
 .information {
