@@ -3,6 +3,7 @@ let information = document.querySelector(".information");
 
 read.onclick = function () {
   information.classList.toggle("opacityShow");
+  read.classList.toggle("readPlay");
 };
 
 let scroller = document.querySelector(".scroller");
@@ -40,6 +41,6 @@ window.addEventListener("load", () => {
 
 let lag = document.querySelector(".lag");
 let lagHolder = document.querySelector(".lag .holder");
-lag.onclick = function (){
-  lagHolder.classList.toggle("showLag")
-}
+lag.onclick = function () {
+  lagHolder.classList.toggle("showLag");
+};
