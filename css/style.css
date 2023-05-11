@@ -102,13 +102,20 @@ a {
 }
 
 header {
-  box-shadow: 0px 1px 8px 0 #00000038;
-  background-color: #1b1b1b;
   padding: 4px 0;
   width: 100%;
   position: fixed;
   z-index: 200;
   top: 0;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.headerBlur {
+  background-color: #1b1b1b;
 }
 
 header .container {
@@ -397,11 +404,7 @@ header .container i {
   background-size: 200% 100%;
   background-position: right bottom;
   cursor: pointer;
-}
-
-.landing .info .read:hover {
-  background-position: left bottom !important;
-  color: black !important;
+  white-space: nowrap;
 }
 
 .readPlay {
@@ -519,12 +522,12 @@ header .container i {
   align-items: center;
   position: relative;
   left: -2700px;
-  transition: 0.7s;
+  transition: 1s;
   opacity: 0;
-  -webkit-transition: 0.7s;
-  -moz-transition: 0.7s;
-  -ms-transition: 0.7s;
-  -o-transition: 0.7s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 
 .servicesBack {
@@ -635,11 +638,11 @@ header .container i {
   bottom: -1300px;
   visibility: hidden;
   opacity: 0;
-  transition: 1s;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
+  transition: 1.5s;
+  -webkit-transition: 1.5s;
+  -moz-transition: 1.5s;
+  -ms-transition: 1.5s;
+  -o-transition: 1.5s;
 }
 
 .projectsUp {
