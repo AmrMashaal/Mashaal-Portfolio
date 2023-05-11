@@ -44,3 +44,39 @@ let lagHolder = document.querySelector(".lag .holder");
 lag.onclick = function () {
   lagHolder.classList.toggle("showLag");
 };
+
+let landing = document.querySelector(".landing .container");
+
+window.addEventListener("load", function () {
+  landing.classList.add("landingTop");
+});
+
+let services = document.querySelector(".services");
+let servicesC = document.querySelector(".services .container");
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= services.offsetTop - 400) {
+    servicesC.classList.add("servicesBack");
+  }
+});
+
+let projects = document.querySelector(".projects");
+let projectsC = document.querySelector(".projects .container");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= projects.offsetTop - 500) {
+    projectsC.classList.add("projectsUp");
+  }
+});
+
+let headerI = document.querySelector("header .container i");
+let beforeNav = document.querySelector(".beforeNav");
+let headerNav = document.querySelector("header .container nav");
+headerI.onclick = function (e) {
+  headerNav.classList.add("headerNav");
+  beforeNav.style.display = "block";
+};
+
+beforeNav.onclick = function (e) {
+  beforeNav.style.display = "none";
+  headerNav.classList.remove("headerNav");
+};
