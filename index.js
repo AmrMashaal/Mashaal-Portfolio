@@ -80,3 +80,14 @@ beforeNav.onclick = function (e) {
   beforeNav.style.display = "none";
   headerNav.classList.remove("headerNav");
 };
+
+let header = document.querySelector("header");
+
+window.addEventListener("scroll", function (){
+  if (window.scrollY >= 10){
+    header.classList.add("headerBlur")
+  }
+  else{
+    header.classList.remove("headerBlur")
+  }
+})
