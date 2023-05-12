@@ -54,6 +54,12 @@ html {
   background-color: rgb(216, 141, 3);
 }
 
+::selection{
+ color: black;
+ background-color: var(--main-color);
+ text-shadow: none;
+}
+
 ul {
   list-style: none;
 }
@@ -204,6 +210,17 @@ header .container nav a:hover::before {
 header .container > a:hover {
   color: var(--main-color);
   border: 1px solid var(--main-color);
+  animation: logoBorder 1s linear infinite;
+  -webkit-animation: logoBorder 1s linear infinite;
+}
+
+@keyframes logoBorder {
+  0%, 100%{
+    border-color: var(--main-color);
+  }
+  50%{
+    border-color: white;
+  }
 }
 
 header .container a:hover {
