@@ -55,6 +55,12 @@ html {
   background-color: rgb(216, 141, 3);
 }
 
+::selection {
+  color: black;
+  background-color: var(--main-color);
+  text-shadow: none;
+}
+
 ul {
   list-style: none;
 }
