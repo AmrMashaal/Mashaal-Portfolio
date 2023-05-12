@@ -83,11 +83,16 @@ beforeNav.onclick = function (e) {
 
 let header = document.querySelector("header");
 
-window.addEventListener("scroll", function (){
-  if (window.scrollY >= 10){
-    header.classList.add("headerBlur")
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 10) {
+    header.classList.add("headerBlur");
+  } else {
+    header.classList.remove("headerBlur");
   }
-  else{
-    header.classList.remove("headerBlur")
-  }
-})
+});
+
+let logo = document.querySelector(".logo");
+
+logo.onclick = function () {
+  return false;
+};
