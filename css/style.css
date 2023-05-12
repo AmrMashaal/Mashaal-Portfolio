@@ -401,6 +401,7 @@ header .container i {
     var(--main-color) 50%,
     rgba(255, 255, 255, 0) 50%
   );
+  user-select: none;
   background-size: 200% 100%;
   background-position: right bottom;
   cursor: pointer;
@@ -1044,7 +1045,7 @@ header .container i {
   background-color: var(--main-color);
   border-radius: 6px;
   color: black;
-  z-index: 11111111111111111;
+  z-index: 1;
   position: relative;
   text-align: left;
   line-height: 1.8;
