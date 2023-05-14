@@ -49,6 +49,10 @@ let landing = document.querySelector(".landing .container");
 
 window.addEventListener("load", function () {
   landing.classList.add("landingTop");
+  let headerNav = this.document.querySelector("header .container nav");
+  let headerLogo = this.document.querySelector("header .container .logo");
+  headerNav.classList.add("headerNavBack");
+  headerLogo.classList.add("headerLogoBack");
 });
 
 let services = document.querySelector(".services");
@@ -71,13 +75,16 @@ window.addEventListener("scroll", function () {
 let headerI = document.querySelector("header .container i");
 let beforeNav = document.querySelector(".beforeNav");
 let headerNav = document.querySelector("header .container nav");
+let headerBefore = document.querySelector("header .before");
 headerI.onclick = function (e) {
   headerNav.classList.add("headerNav");
   beforeNav.style.display = "block";
+  headerBefore.style.display = "block";
 };
 
 beforeNav.onclick = function (e) {
   beforeNav.style.display = "none";
+  headerBefore.style.display = "none";
   headerNav.classList.remove("headerNav");
 };
 
@@ -96,3 +103,9 @@ let logo = document.querySelector(".logo");
 logo.onclick = function () {
   return false;
 };
+
+let landingH2 = document.querySelector(".landing .info h2");
+
+window.addEventListener("load", function () {
+  landingH2.classList.add("landingH2");
+});
