@@ -12,6 +12,7 @@ body {
   background-color: #1b1b1b;
   color: white;
   position: relative;
+  overflow: hidden;
 }
 
 :root {
