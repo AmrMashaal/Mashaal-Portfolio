@@ -37,6 +37,7 @@ big();
 window.addEventListener("load", () => {
   let Open = document.querySelector(".open");
   Open.classList.add("loadingHidden");
+  document.body.style.overflow = "unset"
 });
 
 let lag = document.querySelector(".lag");
