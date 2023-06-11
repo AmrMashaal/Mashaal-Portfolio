@@ -37,7 +37,7 @@ big();
 window.addEventListener("load", () => {
   let Open = document.querySelector(".open");
   Open.classList.add("loadingHidden");
-  document.body.style.overflow = "unset"
+  document.body.style.overflow = "unset";
 });
 
 let lag = document.querySelector(".lag");
@@ -109,4 +109,20 @@ let landingH2 = document.querySelector(".landing .info h2");
 
 window.addEventListener("load", function () {
   landingH2.classList.add("landingH2");
+});
+
+document.addEventListener("click", function (event) {
+  if (event.target !== information && event.target !== read) {
+    information.classList.remove("opacityShow");
+    read.classList.remove("readPlay");
+  }
+});
+
+document.addEventListener("click", function (event) {
+  if (
+    !lag.contains(event.target) === true &&
+    !lagHolder.contains(event.target) === true
+  ) {
+    lagHolder.classList.remove("showLag");
+  }
 });
